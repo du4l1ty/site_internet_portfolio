@@ -736,7 +736,7 @@ header {
     grid-column: 1;
     grid-row: 2;
     /* gère les espaces externes */
-    margin-top: 2.2rem;
+    margin-top: 0.5rem;
 }
 
 
@@ -1249,4 +1249,5 @@ body.dark .footer-partie-gauche {
 body.dark .footer-partie-droite {
     /* stylise le texte */
     color: #eeeeee;
+
 }

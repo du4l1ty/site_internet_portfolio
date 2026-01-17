@@ -1,0 +1,1252 @@
+/* ========================================================================================= */
+/* ----------------------------------------- GLOBAL ---------------------------------------- */
+/* ========================================================================================= */
+
+
+
+/* ====================== */
+/*         GLOBAL         */
+/* ====================== */
+
+
+/* ----- typographie n°1 : Questrial ----- */
+.questrial-regular {
+    /* stylise le texte */
+    font-family: "Questrial", sans-serif;
+    font-style: normal;
+}
+
+.typo-questrial {
+    /* stylise le texte */
+    font-family: 'Questrial';
+}
+
+/* ----- typographie n°2 : League Spartan ----- */
+.league-spartan {
+    /* stylise le texte */
+    font-family: "League Spartan", sans-serif;
+    font-style: normal;
+}
+
+.typo-spartan {
+    /* gère les espaces internes */
+    padding-top: 1em;
+    /* stylise le texte */
+    font-family: 'League spartan';
+}
+
+/* ----- reset global ----- */
+* {
+    /* définit le modèle de boîte */
+    box-sizing: border-box;
+    /* gère les espaces externes */
+    margin: 0;
+    /* gère les espaces internes */
+    padding: 0;
+}
+
+html {
+    /* dimensionne les éléments */
+    height: 100%;
+}
+
+body {
+    /* stylise le texte */
+    font-size: clamp(12px, 2vw, 16px);
+}
+
+main {
+    /* affiche et organise les éléments */
+    overflow-x: hidden;
+    /* dimensionne les éléments */
+    min-height: calc(100vh - 4.4rem * 2);
+    /* contrôle la flexibilité */
+    flex: 1;
+}
+
+.main-contenu {
+    /* positionne les éléments */
+    position: center;
+    /* gère les espaces internes */
+    padding: 0rem 10rem 2rem 10rem;
+    /* aligne le contenu */
+    text-align: justify;
+}
+
+p {
+    /* contrôle la flexibilité */
+    flex-shrink: 0;
+    /* stylise le texte */
+    font-family: "Questrial";
+    font-size: 1.25rem;
+    text-align: justify;
+    text-indent: 2rem;
+}
+
+h1 {
+    /* gère les espaces internes */
+    padding: 0.75rem;
+    /* stylise le texte */
+    font-family: "League Spartan";
+    font-size: 5rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+h2 {
+    /* gère les espaces internes */
+    padding: 2rem 1rem;
+    /* stylise le texte */
+    font-family: "League Spartan";
+    font-size: 3rem;
+    text-align: left;
+    text-decoration: none;
+}
+
+.alinea-desactive {
+    /* stylise le texte */
+    text-indent: 0;
+}
+
+.center {
+    /* aligne le contenu */
+    text-align: center !important;
+}
+
+body, main, p, h2, h3 {
+    /* anime les éléments */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+
+
+
+/* ========================================================================================= */
+/* --------------------------------------- MODE CLAIR -------------------------------------- */
+/* ========================================================================================= */
+
+
+
+/* ====================== */
+/*         GLOBAL         */
+/* ====================== */
+
+
+main {
+    /* colore et décore les fonds */
+    background-color: #eeeeee;
+}
+
+p {
+    /* stylise le texte */
+    color: #2c2c2c;
+}
+
+h1 {
+    /* stylise le texte */
+    color: #eeeeee;
+}
+
+h2 {
+    /* stylise le texte */
+    color: #2c2c2c;
+}
+
+.obligatoire {
+    /* stylise le texte */
+    color: red;
+}
+
+.bloc-navbar {
+    /* positionne les éléments */
+    position: relative;
+    z-index: 10;
+    /* dimensionne les éléments */
+    width: 100%;
+    height: 4.4rem;
+    /* colore et décore les fonds */
+    background-color: rgb(125, 125, 125);
+}
+
+.theme-toggle {
+    /* affiche et organise les éléments */
+    display: flex;
+    overflow: hidden;
+    /* positionne les éléments */
+    position: fixed;
+    bottom: 1.75rem;
+    left: 1.75rem;
+    z-index: 5; /* z-index inférieure à celui du footer pour passer derrière */
+    /* dimensionne les éléments */
+    width: 2.5rem;
+    height: 2.5rem;
+    /* gère les espaces internes */
+    padding: 0;
+    /* aligne le contenu */
+    align-items: center;
+    justify-content: center;
+    /* stylise les bordures */
+    border: none;
+    border-radius: 100px;
+    /* ajoute des ombres */
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+    /* applique des effets visuels */
+    cursor: pointer;
+    /* anime les éléments */
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    /* ajoute des ombres */
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.35);
+    /* anime les éléments */
+    transform: scale(1.1);
+}
+
+.theme-toggle:active {
+    /* anime les éléments */
+    transform: scale(0.9);
+}
+
+.banniere {
+    /* affiche et organise les éléments */
+    overflow: visible;
+    /* positionne les éléments */
+    position: relative;
+    /* dimensionne les éléments */
+    width: 100%;
+    /* gère les espaces externes */
+    margin: 0;
+    margin-bottom: 5rem;
+    /* gère les espaces internes */
+    padding: 0;
+}
+
+.banniere img {
+    /* dimensionne les éléments */
+    width: 100vw;
+    height: auto;
+}
+
+.banniere-texte {
+    /* positionne les éléments */
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    /* stylise le texte */
+    text-shadow: 0.1rem 0.1rem 0.25rem #2c2c2c;
+    white-space: nowrap;
+    /* anime les éléments */
+    transform: translate(-50%, -50%);
+}
+
+.banniere-texte p {
+    /* stylise le texte */
+    font-size: 1.5rem;
+    color: #eeeeee;
+}
+
+.photo-profil {
+    /* affiche et organise les éléments */
+    overflow: hidden;
+    /* positionne les éléments */
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    /* dimensionne les éléments */
+    width: clamp(120px, 22vw, 280px);
+    height: auto;
+    /* stylise les bordures */
+    border: 0.75vw solid #eeeeee;
+    border-radius: 50%;
+    /* anime les éléments */
+    transform: translate(-50%, 50%);
+}
+
+.photo-profil img {
+    /* affiche et organise les éléments */
+    display: block;
+    /* dimensionne les éléments */
+    width: 100%;
+    height: 100%;
+    /* ajuste le rendu des objets */
+    object-fit: cover;
+}
+
+
+
+/* ====================== */
+/*         HEADER         */
+/* ====================== */
+
+
+header {
+    /* affiche et organise les éléments */
+    display: grid;
+    /* positionne les éléments */
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    /* dimensionne les éléments */
+    height: 4.4rem;
+    /* gère les espaces internes */
+    padding: 1rem 2rem;
+    /* crée des grilles */
+    grid-template-columns: repeat(2, 1fr);
+    /* contrôle la flexibilité */
+    flex-shrink: 0;
+    /* aligne le contenu */
+    align-items: center;
+    /* colore et décore les fonds */
+    background-color: rgba(17.25, 17.25, 17.25, 0.75);
+}
+
+
+/* ---------------------- */
+/*    partie de gauche    */
+/* ---------------------- */
+
+.header-partie-gauche {
+    /* crée des grilles */
+    grid-column: 1;
+    /* stylise le texte */
+    font-family: "League Spartan";
+    font-size: 1.25rem;
+    color: #eeeeee;
+    text-align: left;
+}
+
+
+/* ---------------------- */
+/*    partie centrale     */
+/* ---------------------- */
+
+.navbar {
+    /* affiche et organise les éléments */
+    display: flex;
+    /* positionne les éléments */
+    position: absolute;
+    left: 50%;
+    /* crée des grilles */
+    gap: 5rem;
+    /* aligne le contenu */
+    align-items: center;
+    /* anime les éléments */
+    transform: translateX(-50%);
+}
+
+.navbar a {
+    /* affiche et organise les éléments */
+    display: flex;
+    /* crée des grilles */
+    gap: 0.5rem;
+    /* aligne le contenu */
+    align-items: center;
+    /* stylise le texte */
+    font-family: "League Spartan";
+    font-size: 1.25rem;
+    color: #eeeeee;
+    text-align: left;
+    text-decoration: none;
+    /* applique des effets visuels */
+    opacity: 0.75;
+    /* anime les éléments */
+    transition: all 0.3s ease;
+}
+
+.navbar a.page-non-selectionnee:hover {
+    /* applique des effets visuels */
+    opacity: 1;
+    /* anime les éléments */
+    transform: scale(1.05);
+}
+
+.navbar a.page-non-selectionnee:active {
+    /* applique des effets visuels */
+    opacity: 1;
+    /* anime les éléments */
+    transform: scale(0.95);
+}
+
+.navbar a.page-selectionnee {
+    /* stylise le texte */
+    text-decoration: underline;
+    /* applique des effets visuels */
+    opacity: 1 !important;
+}
+
+.navbar img {
+    /* dimensionne les éléments */
+    width: 1.25rem;
+    height: auto;
+}
+
+
+/* ---------------------- */
+/*    partie de droite    */
+/* ---------------------- */
+
+.header-partie-droite {
+    /* affiche et organise les éléments */
+    display: flex;
+    /* crée des grilles */
+    grid-column: 2;
+    gap: 0.5rem;
+    /* gère les espaces externes */
+    margin-left: auto;
+    /* gère les espaces internes */
+    padding: 0.5rem 1rem 0.2rem 1rem;
+    /* aligne le contenu */
+    align-items: center;
+    /* stylise le texte */
+    font-family: "League Spartan";
+    font-size: 1rem;
+    color: #eeeeee;
+    text-align: right;
+    text-decoration: none;
+    /* colore et décore les fonds */
+    background-color: #2c2c2c;
+    /* stylise les bordures */
+    border: 0.15rem solid #eeeeee;
+    border-radius: 50px;
+    /* anime les éléments */
+    transition: all 0.3s ease;
+}
+
+.header-partie-droite:hover {
+    /* stylise le texte */
+    color: #2c2c2c;
+    /* colore et décore les fonds */
+    background-color: #eeeeee;
+    /* anime les éléments */
+    transform: scale(1.05);
+}
+
+.header-partie-droite:active {
+    /* stylise le texte */
+    color: #2c2c2c;
+    /* colore et décore les fonds */
+    background-color: #eeeeee;
+    /* anime les éléments */
+    transform: scale(0.95);
+}
+
+.header-partie-droite img {
+    /* dimensionne les éléments */
+    width: 1.2rem;
+    height: auto;
+    /* gère les espaces externes */
+    margin-bottom: 0.2rem;
+    /* anime les éléments */
+    transition: all 0.3s ease;
+}
+
+.header-partie-droite:hover img {
+    /* applique des effets visuels */
+    filter: brightness(0.25) saturate(0) contrast(1.1);
+}
+
+
+
+/* ====================== */
+/*       MAIN INDEX       */
+/* ====================== */
+
+
+.index-h3 {
+    /* gère les espaces internes */
+    padding: 2rem 1rem;
+    /* stylise le texte */
+    font-family: "League Spartan";
+    font-size: 2rem;
+    color: #2c2c2c;
+    text-align: left;
+    text-decoration: none;
+}
+
+.index-h3-alignement-droite {
+    /* stylise le texte */
+    font-size: 1.5rem;
+    text-align: right;
+}
+
+.index-bouton-telecharger {
+    /* affiche et organise les éléments */
+    display: flex;
+    /* dimensionne les éléments */
+    width: fit-content;
+    /* gère les espaces externes */
+    margin: auto;
+    margin-top: 3rem;
+    /* gère les espaces internes */
+    padding: 0.5rem 1rem 0.2rem 1rem;
+    /* crée des grilles */
+    gap: 0.5rem;
+    /* aligne le contenu */
+    align-items: center;
+    /* stylise le texte */
+    font-family: "League Spartan";
+    font-size: 1.25rem;
+    color: #2c2c2c;
+    text-align: center;
+    text-decoration: none;
+    /* colore et décore les fonds */
+    background-color: #eeeeee;
+    /* stylise les bordures */
+    border: 0.15rem solid #2c2c2c;
+    border-radius: 50px;
+    /* ajoute des ombres */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+    /* anime les éléments */
+    transition: all 0.3s ease;
+}
+
+.index-bouton-telecharger:hover {
+    /* stylise le texte */
+    color: #eeeeee;
+    /* colore et décore les fonds */
+    background-color: #2c2c2c;
+    /* anime les éléments */
+    transform: scale(1.05);
+}
+
+.index-bouton-telecharger:active {
+    /* stylise le texte */
+    color: #eeeeee;
+    /* colore et décore les fonds */
+    background-color: #2c2c2c;
+    /* anime les éléments */
+    transform: scale(0.95);
+}
+
+.index-bouton-telecharger img {
+    /* dimensionne les éléments */
+    width: 1.5rem;
+    height: auto;
+    /* gère les espaces externes */
+    margin-bottom: 0.2rem;
+    /* applique des effets visuels */
+    filter: brightness(0.25) saturate(0) contrast(1.1);
+    /* anime les éléments */
+    transition: all 0.3s ease;
+}
+
+.index-bouton-telecharger:hover img {
+    /* applique des effets visuels */
+    filter: none;
+}
+
+.index-triple-alignement {
+    /* affiche et organise les éléments */
+    display: grid;
+    /* gère les espaces internes */
+    padding: 1rem 0rem;
+    /* crée des grilles */
+    grid-template-columns: repeat(3, 1fr);
+    /* aligne le contenu */
+    align-items: center;
+    place-items: center;
+}
+
+.index-triple-alignement-element {
+    /* gère les espaces externes */
+    margin: 0rem 0.5rem;
+}
+
+.index-double-alignement {
+    /* affiche et organise les éléments */
+    display: grid;
+    /* gère les espaces externes */
+    margin-bottom: 2rem;
+    /* gère les espaces internes */
+    padding: 1rem 0rem;
+    /* crée des grilles */
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.25rem;
+    /* aligne le contenu */
+    align-items: center;
+    place-items: center;
+    justify-content: center;
+}
+
+.index-double-alignement img {
+    /* dimensionne les éléments */
+    width: 100%;
+    height: auto;
+    /* applique des effets visuels */
+    cursor: pointer;
+    /* anime les éléments */
+    transition: all 0.3s ease;
+}
+
+.index-double-alignement img:hover {
+    /* anime les éléments */
+    transform: scale(1.05);
+}
+
+.index-double-alignement img:active {
+    /* anime les éléments */
+    transform: scale(1);
+}
+
+.index-main-contenu-colonne {
+    /* affiche et organise les éléments */
+    display: grid;
+    /* crée des grilles */
+    grid-template-columns: repeat(2, 1fr);
+    /* aligne le contenu */
+    align-items: center;
+}
+
+.index-bouton-voir-plus {
+    /* affiche et organise les éléments */
+    display: block;
+    /* dimensionne les éléments */
+    width: fit-content;
+    /* gère les espaces externes */
+    margin: 0.5rem auto;
+    /* gère les espaces internes */
+    padding: 0.5rem 1rem;
+    /* aligne le contenu */
+    align-items: center;
+    /* stylise le texte */
+    font-family: "League Spartan";
+    font-size: 1.5rem;
+    color: #2c2c2c;
+    text-align: center;
+    text-decoration: none;
+    /* colore et décore les fonds */
+    background-color: #eeeeee;
+    /* stylise les bordures */
+    border: 0.15rem solid #2c2c2c;
+    border-radius: 50px;
+    /* ajoute des ombres */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+    /* anime les éléments */
+    transition: all 0.3s ease;
+}
+
+.index-bouton-voir-plus:hover {
+    /* stylise le texte */
+    color: #eeeeee;
+    /* colore et décore les fonds */
+    background-color: #2c2c2c;
+    /* anime les éléments */
+    transform: scale(1.05);
+}
+
+.index-bouton-voir-plus:active {
+    /* stylise le texte */
+    color: #eeeeee;
+    /* colore et décore les fonds */
+    background-color: #2c2c2c;
+    /* anime les éléments */
+    transform: scale(0.95);
+}
+
+.index-pop {
+    /* stylise le texte */
+    color: #eeeeee;
+    /* colore et décore les fonds */
+    background-color: #2c2c2c;
+    /* anime les éléments */
+    transform: scale(1.05);
+}
+
+
+
+/* ====================== */
+/*     MAIN PORTFOLIO     */
+/* ====================== */
+
+
+.portfolio-organisation-portfolio-V1 {
+    /* affiche et organise les éléments */
+    display: grid;
+    /* gère les espaces internes */
+    padding: 6rem 0rem 2.5rem 0rem;
+    /* crée des grilles */
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 1.25rem;
+}
+
+.portfolio-organisation-portfolio-V1 img {
+    /* dimensionne les éléments */
+    width: 100%;
+    height: auto;
+}
+
+.portfolio-organisation-portfolio-V1 img:nth-child(1) {
+    /* crée des grilles */
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.portfolio-organisation-portfolio-V1 img:nth-child(2) {
+    /* crée des grilles */
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.portfolio-organisation-portfolio-V1 img:nth-child(3) {
+    /* crée des grilles */
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.portfolio-organisation-portfolio-V1 img:nth-child(4) {
+    /* crée des grilles */
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.portfolio-organisation-portfolio-V2 {
+    /* affiche et organise les éléments */
+    display: grid;
+    /* gère les espaces internes */
+    padding: 2.5rem 0rem;
+    /* crée des grilles */
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 1.25rem;
+}
+
+.portfolio-organisation-portfolio-V2 img {
+    /* dimensionne les éléments */
+    width: 100%;
+    height: auto;
+}
+
+.portfolio-organisation-portfolio-V2 img:nth-child(1) {
+    /* crée des grilles */
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.portfolio-organisation-portfolio-V2 img:nth-child(2) {
+    /* crée des grilles */
+    grid-column: 2;
+    grid-row: 1 / 3;
+}
+
+.portfolio-organisation-portfolio-V2 img:nth-child(3) {
+    /* crée des grilles */
+    grid-column: 1;
+    grid-row: 2;
+    /* gère les espaces externes */
+    margin-top: 2.2rem;
+}
+
+
+
+/* ====================== */
+/*      MAIN CONTACT      */
+/* ====================== */
+
+
+.contact-h1 {
+    /* gère les espaces externes */
+    margin-top: 19rem;
+}
+
+.contact-background {
+    /* positionne les éléments */
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    /* dimensionne les éléments */
+    min-height: 100vh;
+    /* colore et décore les fonds */
+    background: center / cover url('_images/contact-background.jpg');
+}
+
+.form {
+    /* positionne les éléments */
+    position: relative;
+    z-index: 2;
+    /* dimensionne les éléments */
+    max-width: 780px;
+    width: 92%;
+    /* gère les espaces externes */
+    margin: 19rem auto 8rem;
+    /* gère les espaces internes */
+    padding: 3rem 3.5rem;
+    /* colore et décore les fonds */
+    background: rgba(245, 245, 245, 0.75);
+    /* stylise les bordures */
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 20px;
+    /* ajoute des ombres */
+    box-shadow: 0 15px 50px -10px rgba(0,0,0,0.25);
+}
+
+.form div {
+    /* gère les espaces externes */
+    margin-bottom: 2rem;
+}
+
+.form label {
+    /* affiche et organise les éléments */
+    display: block;
+    /* gère les espaces externes */
+    margin-bottom: 0.5rem;
+    /* stylise le texte */
+    font-family: "League Spartan";
+    font-size: 1.1rem;
+    color: #2c2c2c;
+}
+
+.form input, .form select {
+    /* dimensionne les éléments */
+    width: 100%;
+    /* gère les espaces internes */
+    padding: 0.85rem 1.1rem;
+    /* stylise le texte */
+    font-family: "Questrial";
+    font-size: 1.05rem;
+    color: #2c2c2c;
+    /* colore et décore les fonds */
+    background-color: #f5f5f5;
+    /* stylise les bordures */
+    border: 1.5px solid #b1b1b1;
+    border-radius: 100px;   
+    /* anime les éléments */
+    transition: all 0.3s ease;
+}
+
+.form select {
+    /* applique des effets visuels */
+    cursor: pointer;
+}
+
+.form input:focus, .form select:focus {
+    /* colore et décore les fonds */
+    background-color: #ffffff;   
+    /* stylise les bordures */
+    border-color: #2c2c2c;
+    outline: none;
+}
+
+.form textarea {
+    /* affiche et organise les éléments */
+    resize: vertical;   
+    /* dimensionne les éléments */
+    width: 100%;
+    min-height: 140px;   
+    /* gère les espaces internes */
+    padding: 0.9rem 1.1rem;   
+    /* stylise le texte */
+    font-family: "Questrial";
+    font-size: 1.05rem;
+    color: #2c2c2c;   
+    /* colore et décore les fonds */
+    background-color: #f5f5f5;   
+    /* stylise les bordures */
+    border: 1.5px solid #b1b1b1;
+    border-radius: 15px;   
+    /* anime les éléments */
+    transition: all 0.22s ease;
+}
+
+.form textarea:focus {
+    /* colore et décore les fonds */
+    background-color: #ffffff;  
+    /* stylise les bordures */
+    border-color: #2c2c2c;
+    outline: none;
+}
+
+.form input[type="submit"] {
+    /* affiche et organise les éléments */
+    display: block;   
+    /* dimensionne les éléments */
+    width: fit-content;
+    min-width: 180px;  
+    /* gère les espaces externes */
+    margin: 2.2rem auto 0.8rem auto;  
+    /* gère les espaces internes */
+    padding: 0.75rem 2rem 0.55rem 2rem;  
+    /* stylise le texte */
+    font-family: "League Spartan";
+    font-size: 1.3rem;
+    color: #2c2c2c;
+    text-align: center;
+    letter-spacing: 0.5px;   
+    /* colore et décore les fonds */
+    background-color: #eeeeee;  
+    /* stylise les bordures */
+    border: 2px solid #2c2c2c;
+    border-radius: 50px;  
+    /* applique des effets visuels */
+    cursor: pointer;   
+    /* anime les éléments */
+    transition: all 0.3s ease;
+}
+
+.form input[type="submit"]:hover {
+    /* stylise le texte */
+    color: #eeeeee;   
+    /* colore et décore les fonds */
+    background-color: #2c2c2c;   
+    /* anime les éléments */
+    transform: scale(1.05);
+}
+
+.form input[type="submit"]:active {
+    /* stylise le texte */
+    color: #eeeeee;  
+    /* colore et décore les fonds */
+    background-color: #2c2c2c;   
+    /* anime les éléments */
+    transform: scale(0.95);
+}
+
+.message-erreur {
+    /* gère les espaces externes */
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;   
+    /* stylise le texte */
+    font-size: 0.9rem;
+    color: red;
+}
+
+@keyframes fadeInOut {
+    /* applique des effets visuels et anime les éléments */
+    0%   {
+        opacity: 0;      
+        transform: translateY(10px);
+    }
+    10%  {
+        opacity: 1;       
+        transform: translateY(0);
+    }
+    90%  {
+        opacity: 1;      
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;      
+        transform: translateY(-10px);
+    }
+}
+
+.message-succes {
+    /* positionne les éléments */
+    position: absolute;
+    /* stylise le texte */
+    font-size: 1rem;
+    color: #2e7d32;
+
+    /* anime les éléments */
+    animation: fadeInOut 5s ease-in-out forwards;
+}
+
+
+
+/* ====================== */
+/*         FOOTER         */
+/* ====================== */
+
+
+footer {
+    /* positionne les éléments */
+    position: relative;
+    z-index: 10;
+    /* dimensionne les éléments */
+    height: 4.4rem;
+    /* gère les espaces internes */
+    padding: 1rem 2rem;
+    /* affiche et organise les éléments */
+    display: grid;
+    overflow: hidden;
+    flex-shrink: 0;
+    /* crée des grilles */
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    /* colore et décore les fonds */
+    background-color: #2c2c2c;
+}
+
+
+/* ---------------------- */
+/*    partie de gauche    */
+/* ---------------------- */
+
+.footer-partie-gauche {
+    /* affiche et organise les éléments */
+    grid-column: 1;
+    /* stylise le texte */
+    color: #eeeeee;
+    font-family: "League Spartan";
+    font-size: 1.25rem;
+    text-align: left;
+}
+
+
+/* ---------------------- */
+/*    partie centrale     */
+/* ---------------------- */
+
+.footer-partie-centrale {
+    /* positionne les éléments */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    /* affiche et organise les éléments */
+    display: grid;
+    align-items: center;
+    /* crée des grilles */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.footer-partie-centrale a {
+    /* anime les éléments */
+    transition: all 0.3s;
+}
+
+.footer-partie-centrale img {
+    /* dimensionne les éléments */
+    width: 2.2rem;
+    height: auto;
+}
+
+.footer-partie-centrale a:hover {
+    /* applique des effets visuels */
+    opacity: 0.75;
+    /* anime les éléments */
+    transform: scale(1.1);
+}
+
+.footer-partie-centrale a:active {
+    /* applique des effets visuels */
+    opacity: 0.75;
+    /* anime les éléments */
+    transform: scale(0.9);
+}
+
+
+/* ---------------------- */
+/*    partie de droite    */
+/* ---------------------- */
+
+.footer-partie-droite {
+    /* affiche et organise les éléments */
+    grid-column: 2;
+    /* stylise le texte */
+    color: #eeeeee;
+    font-family: "Questrial";
+    font-size: 0.75rem;
+    text-align: right;
+}
+
+
+
+
+
+/* ========================================================================================= */
+/* -------------------------------------- MODE SOMBRE -------------------------------------- */
+/* ========================================================================================= */
+
+
+
+/* ====================== */
+/*         GLOBAL         */
+/* ====================== */
+
+
+body.dark main {
+    /* colore et décore les fonds */
+    background-color: #2c2c2c;
+}
+
+body.dark p {
+    /* stylise le texte */
+    color: #eeeeee;
+}
+
+body.dark h2 {
+    /* stylise le texte */
+    color: #eeeeee;
+}
+
+body.dark .theme-toggle {
+    /* ajoute des ombres */
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.25);
+}
+
+body.dark .theme-toggle:hover {
+    /* ajoute des ombres */
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.35);
+}
+
+
+
+/* ====================== */
+/*       MAIN INDEX       */
+/* ====================== */
+
+
+body.dark .photo-profil {
+    /* stylise les bordures */
+    border-color: #2c2c2c;
+}
+
+body.dark .index-bouton-telecharger {
+    /* colore et décore les fonds */
+    background-color: #2c2c2c;
+    /* stylise le texte */
+    color: #eeeeee;
+    /* stylise les bordures */
+    border-color: #eeeeee;
+}
+
+body.dark .index-bouton-telecharger:hover {
+    /* colore et décore les fonds */
+    background-color: #eeeeee;
+    /* stylise le texte */
+    color: #2c2c2c;
+    /* stylise les bordures */
+    border-color: #2c2c2c;
+}
+
+body.dark .index-bouton-telecharger img {
+    /* ajuste le rendu des images */
+    filter: none;
+}
+
+body.dark .index-bouton-telecharger:hover img {
+    /* ajuste le rendu des images */
+    filter: brightness(0.25) saturate(0) contrast(1.1);
+}
+
+body.dark .index-bouton-voir-plus {
+    /* colore et décore les fonds */
+    background-color: #2c2c2c;
+    /* stylise le texte */
+    color: #eeeeee;
+    /* stylise les bordures */
+    border-color: #eeeeee;
+}
+
+body.dark .index-bouton-voir-plus:hover {
+    /* colore et décore les fonds */
+    background-color: #eeeeee;
+    /* stylise le texte */
+    color: #2c2c2c;
+    /* stylise les bordures */
+    border-color: #2c2c2c;
+}
+
+body.dark .index-h3 {
+    /* stylise le texte */
+    color: #eeeeee;
+}
+
+body.dark .index-pop {
+    /* colore et décore les fonds */
+    background-color: #eeeeee;
+    /* stylise le texte */
+    color: #2c2c2c;
+}
+
+
+
+/* ====================== */
+/*     MAIN PORTFOLIO     */
+/* ====================== */
+
+
+/* aucun changement */
+
+
+
+/* ====================== */
+/*      MAIN CONTACT      */
+/* ====================== */
+
+
+body.dark .form {
+    /* colore et décore les fonds */
+    background: rgba(44, 44, 44, 0.85);
+    /* stylise les bordures */
+    border-color: rgba(44, 44, 44, 0.85);
+}
+
+body.dark .form label {
+    /* stylise le texte */
+    color: #eeeeee;
+}
+
+body.dark .form input,
+body.dark .form select,
+body.dark .form textarea {
+    /* colore et décore les fonds */
+    background-color: #333333;
+    /* stylise les bordures */
+    border-color: #555555;
+    /* stylise le texte */
+    color: #eeeeee;
+}
+
+body.dark .form input:focus,
+body.dark .form select:focus,
+body.dark .form textarea:focus {
+    /* colore et décore les fonds */
+    background-color: #2c2c2c;
+    /* stylise les bordures */
+    border-color: #eeeeee;
+}
+
+body.dark .form input[type="submit"] {
+    /* colore et décore les fonds */
+    background-color: #2c2c2c;
+    /* stylise le texte */
+    color: #eeeeee;
+    /* stylise les bordures */
+    border-color: #eeeeee;
+}
+
+body.dark .form input[type="submit"]:hover,
+body.dark .form input[type="submit"]:active {
+    /* colore et décore les fonds */
+    background-color: #eeeeee;
+    /* stylise le texte */
+    color: #2c2c2c;
+    /* stylise les bordures */
+    border-color: #2c2c2c;
+}
+
+body.dark .message-erreur {
+    /* stylise le texte */
+    color: red;
+}
+
+body.dark .message-succes {
+    /* stylise le texte */
+    color: #66bb6a;
+}
+
+
+
+/* ====================== */
+/*         FOOTER         */
+/* ====================== */
+
+
+body.dark footer {
+    /* colore et décore les fonds */
+    background-color: #181818;
+}
+
+body.dark .footer-partie-gauche {
+    /* stylise le texte */
+    color: #eeeeee;
+}
+
+body.dark .footer-partie-droite {
+    /* stylise le texte */
+    color: #eeeeee;
+}

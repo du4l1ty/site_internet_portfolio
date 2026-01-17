@@ -1,0 +1,186 @@
+<!DOCTYPE html> <!-- ===== CONTACT.html ===== -->
+<html lang="fr"> <!-- langue de base : français -->
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css"> <!-- connexion avec le CSS -->
+    <!-- typographies : League Spartan & Questrial -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Questrial&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+</head>
+
+
+
+<body>
+
+
+    <header> <!-- ===== HEADER ===== -->
+
+        <!-- EMPLACEMENT GAUCHE -->
+        <div class="header-partie-gauche" >
+            Noah<br>
+            Bodineau
+        </div>
+
+        <!-- EMPLACEMENT CENTRAL -->
+        <nav class="navbar">
+            <!-- Accueil -->
+            <a href="index.html" class="page-non-selectionnee" title="page Accueil">
+                Accueil
+                <img src="_images/icones_svg/fleche_haut.svg" alt="Aller sur la page Accueil">
+            </a>
+            <!-- Portfolio -->
+            <a href="portfolio.html" class="page-non-selectionnee" title="page Portfolio">
+                Portfolio
+                <img src="_images/icones_svg/fleche_haut.svg" alt="Aller sur la page Portfolio">
+            </a>
+            <!-- Contact -->
+            <a href="" class="page-selectionnee" title="page Contact">
+                Contact
+                <img src="_images/icones_svg/fleche_bas.svg" alt="Page Actuelle : Contact">
+            </a>
+        </nav>
+
+        <!-- EMPLACEMENT DROITE -->
+        <a href="_documents/CV_Noah_BODINEAU.zip" class="header-partie-droite" download="CV_Noah_BODINEAU.zip" title="CV de Noah BODINEAU">
+            TÉLÉCHARGER CV
+            <img src="_images/icones_svg/telechargement.svg" alt="Télécharger le CV de Noah BODINEAU">
+        </a>
+
+    </header>
+
+
+    <main> <!-- ===== MAIN ===== -->
+
+
+        <div class="bloc-navbar"></div> <!-- NAVBAR à 100% d'opacité -->
+
+
+        <button class="theme-toggle" aria-label="Changer le thème"> <!-- BOUTON theme-toggle -->
+            <img src="_images/icones_svg/mode_sombre.svg" alt="Icône mode sombre">
+        </button>
+
+
+        <div class="contact-background"> <!-- SECTION background -->
+        </div>
+
+
+        <section class="banniere"> <!-- SECTION banniere -->
+
+            <!-- Texte -->
+            <div class="banniere-texte">
+                <h1 class="contact-h1">CONTACT</h1>
+            </div>
+            
+        </section>
+
+
+        <form class="form"> <!-- FORMULAIRE -->
+
+            <div> <!-- CHAMP genre -->
+                <label for="selection-genre">Genre <span class="obligatoire">*</span> :</label>
+                <select id="selection-genre">
+                    <option disabled selected hidden>-- veuillez choisir une option --</option>
+                    <option>Femme</option>
+                    <option>Homme</option>
+                    <option>Je préfère ne pas le dire</option>
+                </select>
+            </div>
+
+            <div> <!-- CHAMP prénom -->
+                <label for="prenom">Prénom <span class="obligatoire">*</span> :</label>
+                <input 
+                    type="text" 
+                    id="prenom" 
+                    placeholder="ex. prénom" />
+            </div>
+
+            <div> <!-- CHAMP nom de famille -->
+                <label for="nom">Nom de famille <span class="obligatoire">*</span> :</label>
+                <input 
+                    type="text" 
+                    id="nom"
+                    placeholder="ex. NOM" />
+            </div>
+
+            <div> <!-- CHAMP email -->
+                <label for="email">E-mail <span class="obligatoire">*</span> :</label>
+                <input 
+                    type="email"
+                    id="email" 
+                    placeholder="ex. prenom.nom@mail.com" />
+            </div>
+
+            <div> <!-- CHAMP téléphone -->
+                <label for="telephone">N° de téléphone :</label>
+                <input 
+                    type="tel"
+                    id="telephone" 
+                    placeholder="ex. 06 12 34 56 78"
+                    maxlength="14"
+                    inputmode="numeric" />
+            </div>
+
+            <div> <!-- CHAMP message -->
+                <label for="message">Message <span class="obligatoire">*</span> :</label>
+                <textarea 
+                    type="text"
+                    id="message" 
+                    rows="3"
+                    minlength="25"
+                    placeholder="ex. contenu de votre message (min. 25 caractères)" ></textarea>
+            </div>
+
+            <div> <!-- BOUTON ENVOYÉ -->
+                <input type="submit" value="envoyer"/>
+            </div>
+
+        </form>
+
+    </main>
+
+
+    <footer> <!-- ===== FOOTER ===== -->  
+
+        <!-- EMPLACEMENT de gauche -->
+        <div class="footer-partie-gauche">
+            Noah<br>
+            Bodineau
+        </div>
+
+        <!-- EMPLACEMENT central -->
+        <div class="footer-partie-centrale">
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/noah-bodineau" target="_blank">
+                <img src="_images/icones_png/linkedin.png" alt="Logo de LinkedIn" title="LinkedIn">
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/_rick_rolled__" target="_blank">
+                <img src="_images/icones_png/instagram.png" alt="Logo de Instagram" title="Instagram">
+            </a>
+
+            <!-- Youtube -->
+            <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&list=RDxvFZjo5PgG0" target="_blank">
+                <img src="_images/icones_png/youtube.png" alt="Logo de Youtube" title="Youtube">
+            </a>
+        </div>
+
+        <!-- EMPLACEMENT de droite -->
+        <div class="footer-partie-droite">
+            © 2026 Noah BODINEAU<br>
+            Tous droits réservés
+        </div>
+
+    </footer>  
+
+
+    <script src="script.js"></script> <!-- connexion avec le JS -->
+
+
+</body>
+
+
+
+</html>
